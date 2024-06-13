@@ -1,3 +1,3 @@
 # tf-kodeKloud
 
-- [Module 1 - Why terraform](/why-terraform)     
+- [Module 1 - Why terraform](/tf-kodeKloud/why-terraform)     
