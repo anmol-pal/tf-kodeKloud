@@ -46,3 +46,68 @@ resource local_file my-pet{
     content = var.file-content[st1]
 }
 ```
+
+#### Set
+Duplicates not allowed
+variables.tf
+```
+variable "prefix" {
+    default = ["Mr", "Mrs", "Sir"]
+    type = set(string)
+}
+```
+
+#### Objects
+variables.tf
+```
+variable "bella"{
+    type = object({
+        name = string
+        color = string
+        age = number
+        food = list(string)
+        favourite_pet = bool
+    })
+}
+```
+
+#### Tuples
+variables.tf
+```
+    type = tuple ([string, number, bool])
+    default = ["cat", 7, true]
+```
+
+### Other ways of passing variables 
+#### Commandline
+```
+terraform apply -var "filename=/abc/edf.txt" -var "content=abcedf" ... 
+```
+
+#### Environment Variables
+Export variable followed by TF_VAR
+```
+export TF_VAR_filename="/abc/edf.txt"
+export TF_VAR_content="abcedf"
+...
+...
+terraform apply
+```
+#### Variable definition files
+terraform.tfvars
+```
+filename="/abc/edf.txt"
+content="abcedf"
+$ terraform apply
+```
+
+if file name is different than **terraform.tfvars** then pass the variable file as an arg
+```
+terraform apply -var-file=variable.tfvars
+```
+
+### Variable Definition Precedence
+If more than one of the above ways are used to assign variables , terraform follows 
+```
+environment variables < terraform.tfvars < *.auto.tfvars (alphabetical order) < -var or -var-file
+```
