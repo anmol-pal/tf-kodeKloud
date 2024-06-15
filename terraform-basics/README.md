@@ -111,3 +111,8 @@ If more than one of the above ways are used to assign variables , terraform foll
 ```
 environment variables < terraform.tfvars < *.auto.tfvars (alphabetical order) < -var or -var-file
 ```
+
+### Resource Attribute Refernces
+```
+use via ${resourse_type.resource_name.attribute}
+```
