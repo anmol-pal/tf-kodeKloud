@@ -60,7 +60,7 @@ To prevent deletion of a resource, it will not work if the corresponding resourc
 ```
 
 * ignore_changes
-  will ignore changes made in tags
+Will ignore changes made in tags
 ```
 resource "aws_instace" "webserver" {
     ami = "adwqwwqsdxfgchvjbk"
