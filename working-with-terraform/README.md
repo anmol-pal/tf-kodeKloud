@@ -76,6 +76,7 @@ resource "aws_instace" "webserver" {
 ```
 
 ## Data Sources
+
 Its used for read attributes from a resource managed outside of tf, data source is read only
 
 ```
@@ -90,9 +91,11 @@ resource "local_file" "pet"{
     content = data.local_file.dog.content
 }
 ```
+
 ## Meta Arguments
 
 ### count
+
 ```
 variables.tf
 variable "filename"{
