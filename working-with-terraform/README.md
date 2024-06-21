@@ -52,13 +52,15 @@ resource "local_file" "pet"{
 ```
 * prevent_destroy
 To prevent deletion of a resource, it will not work if the corresponding resource block was removed from the configuration file
+
 ```
     lifecycle {
         prevent_destroy = true
     }
 ```
 
-* ignore_changes 
+* ignore_changes
+  
 ```
 resource "aws_instace" "webserver" {
     ami = "adwqwwqsdxfgchvjbk"
@@ -155,6 +157,7 @@ output "pets" {
 
 ## Working with specific versions of providers 
 Practice specifying versions of tf providers, otherwise always latest may get downloaded and it could run current config out of support.
+
 ```
 terraform {
     required_providers {
