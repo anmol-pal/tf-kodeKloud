@@ -1,6 +1,9 @@
 main.tf [Main configuration file containing resource definition]
+
 variables.tf [contains variable declarations]
+
 output.tf [contains output from resources]
+
 provider.tf [contains provider definition]
 
 
