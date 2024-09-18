@@ -124,5 +124,5 @@ environment variables < terraform.tfvars < *.auto.tfvars (alphabetical order) < 
 
 ### Resource Attribute Refernces
 ```
-use via ${resourse_type.resource_name.attribute}
+use via ${resource_type.resource_name.attribute}
 ```
