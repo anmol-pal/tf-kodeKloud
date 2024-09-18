@@ -21,13 +21,20 @@ variable "length"{
 
 types of variables 
     - string  - "/root/pet.txt"
+    
     - number  - 1
+    
     - bool    - true/false
+    
     - any     - Default Value
+    
     - map     - pet1 = cat
                 pet2 = dog
+                
     - lists   - ["cat", "dog"]
+    
     - object  - Complex Data structure
+    
     - tuple   - Complex Data structure
 
 
